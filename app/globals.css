@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --gold: #E4C75A;
+  --gold-dark: #B5962F;
+  --black-deep: #0A0A0A;
+  --black-mid: #1E1E1E;
+  --white-ice: #F2F2F2;
+  --gray-mid: #9C9C9C;
+
+  --background: #0A0A0A;
+  --foreground: #F2F2F2;
+  --card: #1E1E1E;
+  --card-foreground: #F2F2F2;
+  --popover: #1E1E1E;
+  --popover-foreground: #F2F2F2;
+  --primary: #E4C75A;
+  --primary-foreground: #0A0A0A;
+  --secondary: #1E1E1E;
+  --secondary-foreground: #F2F2F2;
+  --muted: #1E1E1E;
+  --muted-foreground: #9C9C9C;
+  --accent: #B5962F;
+  --accent-foreground: #0A0A0A;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: rgba(228, 199, 90, 0.15);
+  --input: rgba(228, 199, 90, 0.15);
+  --ring: #E4C75A;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Great Vibes', cursive;
+  --font-mono: 'Geist Mono', monospace;
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-black-deep: var(--black-deep);
+  --color-black-mid: var(--black-mid);
+  --color-white-ice: var(--white-ice);
+  --color-gray-mid: var(--gray-mid);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #B5962F;
+  border-radius: 3px;
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes pulse-slow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 2s infinite;
+}

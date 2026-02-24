@@ -1,0 +1,10 @@
+# pz runtime files
+__pz_runtime_loader.js
+__pz_devtools.tsx
+__pz_jsx-dev-runtime.ts
+
+# Common ignores
+node_modules/
+.next/
+.env*.local
+.DS_Store
