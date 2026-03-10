@@ -59,10 +59,10 @@ const CardNav: React.FC<CardNavProps> = ({ items }) => {
               className="h-8 sm:h-10 w-auto"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-sans font-bold text-gold text-xs tracking-[0.15em] uppercase">
+              <span className="font-sans font-bold text-gold text-sm sm:text-base tracking-[0.08em] uppercase">
                 RH que
               </span>
-              <span className="font-serif text-gold text-sm">
+              <span className="font-sans font-bold text-gold text-lg sm:text-xl tracking-wide italic" style={{ fontStyle: 'italic' }}>
                 Acontece
               </span>
             </div>
@@ -131,8 +131,8 @@ const CardNav: React.FC<CardNavProps> = ({ items }) => {
         {/* Mobile menu */}
         <div
           ref={menuRef}
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
-            isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          className={`md:hidden overflow-hidden overflow-y-auto transition-all duration-300 ease-out ${
+            isOpen ? "max-h-[70vh] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="px-4 pb-4 pt-2">

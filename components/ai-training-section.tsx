@@ -19,10 +19,11 @@ const terminalLines = [
 
 const benefits = [
   "Criação de prompts estratégicos",
-  "Agentes personalizados para RH",
+  "Desenvolvimento de agentes personalizados para RH",
   "Automação de processos repetitivos",
-  "Relatórios inteligentes",
-  "Mais foco em pessoas e decisões",
+  "Geração de relatórios inteligentes",
+  "Otimização da análise de dados para tomada de decisão",
+  "Estruturação de rotinas mais eficientes e estratégicas",
 ];
 
 const AITrainingSection: React.FC = () => {
@@ -56,25 +57,20 @@ const AITrainingSection: React.FC = () => {
         <div>
           <TagBadge icon={Bot}>IA Aplicada ao RH</TagBadge>
 
-          <div className="mb-2">
-            <ScrollFloat
-              as="h2"
-              containerClassName="text-2xl sm:text-3xl md:text-4xl font-bold"
-              textClassName="font-sans font-bold text-gold uppercase tracking-tight"
-            >
-              Menos burocracia.
-            </ScrollFloat>
-          </div>
           <ScrollFloat
             as="h2"
-            containerClassName="text-2xl sm:text-3xl md:text-4xl font-bold mb-6"
+            containerClassName="text-2xl sm:text-3xl md:text-4xl font-bold mb-3"
             textClassName="font-sans font-bold text-gold uppercase tracking-tight"
           >
-            Mais estratégia.
+            Capacitação de equipes em IA
           </ScrollFloat>
+          
+          <p className="font-sans text-white-ice/90 text-lg sm:text-xl font-medium mb-6">
+            {"Redução de retrabalho, ganho de produtividade e decisões baseadas em dados."}
+          </p>
 
           <p className="font-sans text-white-ice/80 text-base leading-relaxed mb-6">
-            {"Capacito equipes de RH para usar IA de forma prática:"}
+            {"Capacito equipes de RH para aplicar Inteligência Artificial de forma prática e estratégica no dia a dia, por meio de:"}
           </p>
 
           <div className="space-y-3 mb-8">

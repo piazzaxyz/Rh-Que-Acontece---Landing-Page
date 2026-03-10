@@ -16,13 +16,6 @@ const AboutSection: React.FC = () => {
 
   return (
     <Section id="sobre" className="relative overflow-hidden">
-      {/* Background decorative text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none overflow-hidden w-full">
-        <span className="font-serif text-[120px] sm:text-[200px] md:text-[300px] text-gold/[0.04] whitespace-nowrap block text-center">
-          25 anos
-        </span>
-      </div>
-
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Image placeholder */}
         <div className="about-reveal flex justify-center lg:justify-start">
@@ -39,7 +32,7 @@ const AboutSection: React.FC = () => {
               }}
             >
               <img
-                src="/siteCarol.webp"
+                src="/CarolRhQueAcontece.jpeg"
                 alt="Caroline Scholl"
                 className="w-full h-full object-cover"
               />
@@ -69,7 +62,7 @@ const AboutSection: React.FC = () => {
 
           <div className="about-reveal space-y-3 mb-6">
             <p className="font-sans text-white-ice/80 text-base leading-relaxed">
-              {"25 anos de experiência em Recursos Humanos"}
+              {"25+ anos de experiência em Recursos Humanos"}
             </p>
             <p className="font-sans text-white-ice/80 text-base leading-relaxed">
               {"Desde 2010: implantação de RH do zero"}

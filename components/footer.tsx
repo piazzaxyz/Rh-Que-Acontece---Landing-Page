@@ -10,9 +10,9 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { label: "WhatsApp", href: "https://wa.me/XXXXX" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Instagram", href: "#" },
+  { label: "WhatsApp", href: "https://wa.me/5551981391355" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/rh-que-acontece/posts/?feedView=all" },
+  { label: "Instagram", href: "https://www.instagram.com/rhqueacontece/" },
 ];
 
 const Footer: React.FC = () => {
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <p className="font-sans text-gray-mid text-xs text-center mt-6">
-          {"© 2025 RH que Acontece — Caroline Scholl. Todos os direitos reservados."}
+          {"© 2026 RH que Acontece — Caroline Scholl. Todos os direitos reservados."}
         </p>
 
       </div>

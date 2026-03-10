@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Target, Search, Users, BarChart3, CheckCircle2 } from "lucide-react";
+import { Target, Users, BarChart3, CheckCircle2 } from "lucide-react";
 import ScrollFloat from "@/components/scroll-float";
 import { Section, TagBadge, GoldDivider } from "@/components/ui-utils";
 import { useScrollReveal } from "@/components/ui-utils";
@@ -23,19 +23,6 @@ const recruitmentItems = [
     ],
     objective: "Contratar certo da primeira vez, reduzindo turnover e custos.",
     badge: "Redução de 40% no turnover",
-  },
-  {
-    icon: Search,
-    title: "Hunting Especializado",
-    deliveries: [
-      "Mapeamento de mercado e benchmark salarial",
-      "Abordagem confidencial e personalizada",
-      "Shortlist com top 3-5 candidatos qualificados",
-      "Acompanhamento pós-contratação por 90 dias",
-    ],
-    objective:
-      "Identificar e atrair talentos estratégicos para posições de liderança.",
-    badge: "Posições estratégicas",
   },
   {
     icon: Users,
@@ -69,13 +56,13 @@ const RecruitmentSection: React.FC = () => {
   return (
     <Section id="recrutamento">
       <div className="text-center mb-10 sm:mb-16">
-        <TagBadge icon={Target}>Recrutamento Estrategico</TagBadge>
+        <TagBadge icon={Target}>Recrutamento Estratégico</TagBadge>
         <ScrollFloat
           as="h2"
           containerClassName="text-2xl sm:text-3xl md:text-5xl font-bold"
           textClassName="font-sans font-bold text-gold uppercase tracking-tight"
         >
-          Contratacões que Transformam
+          Contratações que Transformam
         </ScrollFloat>
         <div className="flex justify-center">
           <GoldDivider />

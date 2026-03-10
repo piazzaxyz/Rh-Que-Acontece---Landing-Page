@@ -13,24 +13,46 @@ import WhatsAppButton from "@/components/whatsapp-button";
 
 const navItems = [
   {
+    label: "Quem Sou",
+    bgColor: "rgba(30,30,30,0.9)",
+    textColor: "#F2F2F2",
+    links: [
+      {
+        label: "Sobre Mim",
+        href: "#sobre",
+        ariaLabel: "Sobre Mim",
+      },
+      {
+        label: "Minha Trajetória",
+        href: "#sobre",
+        ariaLabel: "Trajetória",
+      },
+    ],
+  },
+  {
     label: "Serviços",
     bgColor: "rgba(30,30,30,0.9)",
     textColor: "#F2F2F2",
     links: [
       {
-        label: "Estruturação de RH",
-        href: "#estruturacao",
-        ariaLabel: "Estruturação de RH",
+        label: "Diagnóstico e Implementação de RH",
+        href: "#servicos",
+        ariaLabel: "Diagnóstico e Implementação de RH",
       },
       {
-        label: "Recrutamento Estratégico",
+        label: "Recrutamento e Seleção",
         href: "#recrutamento",
-        ariaLabel: "Recrutamento",
+        ariaLabel: "Recrutamento e Seleção",
       },
       {
-        label: "Treinamento em IA",
+        label: "IA Aplicada ao RH",
         href: "#treinamento-ia",
-        ariaLabel: "Treinamento IA",
+        ariaLabel: "IA Aplicada ao RH",
+      },
+      {
+        label: "Mapeamento Comportamental",
+        href: "#recrutamento",
+        ariaLabel: "Mapeamento Comportamental",
       },
     ],
   },
@@ -40,11 +62,10 @@ const navItems = [
     textColor: "#F2F2F2",
     links: [
       {
-        label: "eBooks Gratuitos",
+        label: "eBooks e Materiais",
         href: "#materiais",
-        ariaLabel: "eBooks gratuitos",
+        ariaLabel: "eBooks e Materiais",
       },
-      { label: "Guias de RH", href: "#materiais", ariaLabel: "Guias de RH" },
     ],
   },
   {
@@ -54,11 +75,11 @@ const navItems = [
     links: [
       {
         label: "WhatsApp",
-        href: "https://wa.me/XXXXX",
+        href: "https://wa.me/5551981391355",
         ariaLabel: "WhatsApp",
       },
-      { label: "LinkedIn", href: "#", ariaLabel: "LinkedIn" },
-      { label: "Instagram", href: "#", ariaLabel: "Instagram" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/rh-que-acontece/posts/?feedView=all", ariaLabel: "LinkedIn" },
+      { label: "Instagram", href: "https://www.instagram.com/rhqueacontece/", ariaLabel: "Instagram" },
     ],
   },
 ];
@@ -69,12 +90,12 @@ export default function Home() {
       <ParticleBackground />
       <div className="relative z-10">
         <CardNav items={navItems} />
-        <HeroSection />
         <PurposeSection />
         <ServicesSection />
-        <AboutSection />
         <RecruitmentSection />
         <AITrainingSection />
+        <HeroSection />
+        <AboutSection />
         <MaterialsSection />
         <LeadFormSection />
         <Footer />

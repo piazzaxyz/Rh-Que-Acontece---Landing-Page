@@ -4,7 +4,6 @@ import {
   Building2,
   Users,
   Brain,
-  Search,
   BarChart3,
   ArrowUpRight,
 } from "lucide-react";
@@ -15,43 +14,35 @@ import { useScrollReveal } from "@/components/ui-utils";
 const services = [
   {
     icon: Building2,
-    title: "Estruturação e Implantação de RH do Zero",
+    title: "Diagnóstico e Implementação de RH",
     description:
       "Diagnóstico completo, políticas internas, compliance trabalhista e processos sob medida para sua empresa crescer com base sólida.",
     tag: "Implantação Completa",
-    large: true,
+    href: "#servicos",
   },
   {
     icon: Users,
-    title: "Recrutamento Estratégico por Competências",
+    title: "Recrutamento e Seleção",
     description:
       "Método estruturado com DISC/PDA, aderência cultural e shortlist qualificada para suas posições-chave.",
-    tag: "Seleção Avançada",
-    large: false,
+    tag: "Seleção por Competências",
+    href: "#recrutamento",
   },
   {
     icon: Brain,
-    title: "Treinamento em IA aplicada ao RH",
+    title: "IA Aplicada ao RH (Treinamentos)",
     description:
       "Capacitação prática: prompts estratégicos, agentes personalizados e automação de processos repetitivos.",
-    tag: "IA Prática",
-    large: false,
-  },
-  {
-    icon: Search,
-    title: "Hunting Especializado",
-    description:
-      "Mapeamento de mercado, abordagem confidencial e shortlist para posições estratégicas e de liderança.",
-    tag: "Executive Search",
-    large: false,
+    tag: "Capacitação em IA",
+    href: "#treinamento-ia",
   },
   {
     icon: BarChart3,
-    title: "Mapeamento Comportamental",
+    title: "Mapeamento Comportamental e Perfil",
     description:
       "Análise DISC, forças de liderança e devolutiva individual para decisões assertivas de gestão de pessoas.",
     tag: "Assessment",
-    large: false,
+    href: "#recrutamento",
   },
 ];
 
@@ -61,35 +52,35 @@ const ServicesSection: React.FC = () => {
   return (
     <Section id="servicos" className="relative">
       <div className="text-center mb-10 sm:mb-16">
-        <TagBadge icon={Building2}>Nossos Servicos</TagBadge>
+        <TagBadge icon={Building2}>Nossos Serviços</TagBadge>
         <ScrollFloat
           as="h2"
           containerClassName="text-2xl sm:text-3xl md:text-5xl font-bold"
           textClassName="font-sans font-bold text-gold uppercase tracking-tight"
         >
-          Solucões Estratégicas
+          Soluções Estratégicas
         </ScrollFloat>
         <div className="flex justify-center">
           <GoldDivider />
         </div>
       </div>
 
-      {/* Bento grid layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {/* Grid 2x2 layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto">
         {services.map((service, idx) => {
           const Icon = service.icon;
           return (
-            <div
+            <a
               key={idx}
-              className={`service-card group bg-black-mid rounded-2xl p-5 sm:p-6 border border-gold/10
+              href={service.href}
+              className="service-card group bg-black-mid rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-gold/10
                          hover:border-gold/40 hover:shadow-[0_0_20px_rgba(228,199,90,0.15)]
-                         hover:scale-105 hover:-translate-y-2
-                         transition-all duration-500 ease-out cursor-pointer
-                         ${idx === 0 ? "sm:col-span-2 lg:col-span-1 lg:row-span-2" : ""}`}
+                         hover:scale-[1.02] hover:-translate-y-1
+                         transition-all duration-500 ease-out cursor-pointer"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="p-3 rounded-xl bg-gold/[0.08] border border-gold/20">
-                  <Icon size={24} className="text-gold" />
+              <div className="flex items-start justify-between mb-3">
+                <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-gold/[0.08] border border-gold/20">
+                  <Icon size={20} className="text-gold sm:w-6 sm:h-6" />
                 </div>
                 <ArrowUpRight
                   size={18}
@@ -97,16 +88,16 @@ const ServicesSection: React.FC = () => {
                              group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
               </div>
-              <h3 className="font-sans font-bold text-gold text-lg mb-3 leading-tight">
+              <h3 className="font-sans font-bold text-gold text-base sm:text-lg mb-2 leading-tight">
                 {service.title}
               </h3>
-              <p className="font-sans text-white-ice/70 text-sm leading-relaxed mb-4">
+              <p className="font-sans text-white-ice/70 text-xs sm:text-sm leading-relaxed mb-3">
                 {service.description}
               </p>
               <span className="inline-block px-3 py-1 rounded-full bg-gold/[0.08] border border-gold/20 text-gold text-xs font-sans font-medium tracking-wide">
                 {service.tag}
               </span>
-            </div>
+            </a>
           );
         })}
       </div>

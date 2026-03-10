@@ -36,6 +36,7 @@
 @theme inline {
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Great Vibes', cursive;
+  --font-display: 'Playfair Display', serif;
   --font-mono: 'Geist Mono', monospace;
   --color-gold: var(--gold);
   --color-gold-dark: var(--gold-dark);

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Montserrat, Great_Vibes } from 'next/font/google'
+import { Montserrat, Great_Vibes, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -16,11 +16,17 @@ const greatVibes = Great_Vibes({
   display: 'swap',
 })
 
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: 'RH que Acontece | Consultoria Estratégica de RH + IA',
   description:
     'Estruturamos seu RH, fortalecemos suas contratações e ensinamos sua equipe a trabalhar com Inteligência Artificial de forma estratégica.',
-  generator: 'Rh que Acontece',
+  generator: 'RH que Acontece',
   icons: {
     icon: '/Cópia de dourado 1 sem fundo-1.svg',
   },
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${montserrat.variable} ${greatVibes.variable} font-sans antialiased bg-black-deep text-white-ice`}
+        className={`${montserrat.variable} ${greatVibes.variable} ${playfair.variable} font-sans antialiased bg-black-deep text-white-ice`}
       >
         {children}
         <Analytics />
