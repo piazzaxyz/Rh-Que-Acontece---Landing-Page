@@ -13,6 +13,7 @@ const socialLinks = [
   { label: "WhatsApp", href: "https://wa.me/5551981391355" },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/rh-que-acontece/posts/?feedView=all" },
   { label: "Instagram", href: "https://www.instagram.com/rhqueacontece/" },
+  { label: "Facebook", href: "https://www.facebook.com/share/1CGzMAR4dF/" },
 ];
 
 const Footer: React.FC = () => {

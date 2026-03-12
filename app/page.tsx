@@ -80,6 +80,7 @@ const navItems = [
       },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/rh-que-acontece/posts/?feedView=all", ariaLabel: "LinkedIn" },
       { label: "Instagram", href: "https://www.instagram.com/rhqueacontece/", ariaLabel: "Instagram" },
+      { label: "Facebook", href: "https://www.facebook.com/share/1CGzMAR4dF/", ariaLabel: "Facebook" },
     ],
   },
 ];
