@@ -102,7 +102,9 @@ const AboutSection: React.FC = () => {
           </blockquote>
 
           <a
-            href="#contato"
+            href="https://www.linkedin.com/in/carolineschollrh/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="about-reveal inline-flex items-center gap-2 text-gold font-sans font-semibold text-sm
                        hover:gap-3 transition-all duration-300"
           >

@@ -6,7 +6,7 @@ import ServicesSection from "@/components/services-section";
 import AboutSection from "@/components/about-section";
 import RecruitmentSection from "@/components/recruitment-section";
 import AITrainingSection from "@/components/ai-training-section";
-import MaterialsSection from "@/components/materials-section";
+
 import LeadFormSection from "@/components/lead-form-section";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/whatsapp-button";
@@ -91,12 +91,11 @@ export default function Home() {
       <div className="relative z-10">
         <CardNav items={navItems} />
         <PurposeSection />
+        <AboutSection />
         <ServicesSection />
         <RecruitmentSection />
         <AITrainingSection />
         <HeroSection />
-        <AboutSection />
-        <MaterialsSection />
         <LeadFormSection />
         <Footer />
       </div>

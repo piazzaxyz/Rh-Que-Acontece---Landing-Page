@@ -56,13 +56,13 @@ const RecruitmentSection: React.FC = () => {
   return (
     <Section id="recrutamento">
       <div className="text-center mb-10 sm:mb-16">
-        <TagBadge icon={Target}>Recrutamento Estratégico</TagBadge>
+        <TagBadge icon={Target}>Contratações que Transformam</TagBadge>
         <ScrollFloat
           as="h2"
           containerClassName="text-2xl sm:text-3xl md:text-5xl font-bold"
           textClassName="font-sans font-bold text-gold uppercase tracking-tight"
         >
-          Contratações que Transformam
+          Recrutamento Estratégico
         </ScrollFloat>
         <div className="flex justify-center">
           <GoldDivider />

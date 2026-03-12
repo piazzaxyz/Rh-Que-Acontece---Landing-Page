@@ -89,22 +89,15 @@ const HeroSection: React.FC = () => {
         {/* CTAs */}
         <div className="hero-ctas flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
           <a
-            href="#lead-form"
+            href="https://wa.me/5551981391355"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl
                        bg-gradient-to-r from-gold-dark to-gold
                        text-black-deep font-sans font-bold text-sm
                        hover:shadow-[0_0_30px_rgba(228,199,90,0.5)] transition-all duration-300"
           >
             {"Fale Conosco"}
-            <ArrowUpRight size={16} />
-          </a>
-          <a
-            href="#materiais"
-            className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl
-                       border-2 border-gold text-gold font-sans font-bold text-sm
-                       hover:bg-gold/10 transition-all duration-300"
-          >
-            {"Baixar material gratuito"}
           </a>
         </div>
       </div>
